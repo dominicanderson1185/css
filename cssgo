@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body{
+          background-color: black;
+         
+}
+        p {
+            color: white;
+        }
+        
+    </style>
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+
+}
+</script>
+
+</head>
+<body>
+    
+
+
+<img id="image1" src="https://img.cinemablend.com/filter:scale/cb/7/d/1/5/a/8/7d15a8ecc966e2b842cbfbf7a918fc8df7baae6071f092416b9f46d7aafc3d50.jpg?mw=600">
+<script>rotateAnimation("image1",15);</script>
+<h2 style="width:200px;" id="status"></h2>
+
+ <p> I AM BATMAN! </p>
+</body>  
+</html>
