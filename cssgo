@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+/*
+This is my css code. This changes the background to black and the paragragh to white so that the background can actually still be black.
+*/
     <style>
     body{
           background-color: black;
@@ -39,5 +42,6 @@ function rotateAnimation(el,speed){
 <h2 style="width:200px;" id="status"></h2>
 
  <p> I AM BATMAN! </p>
+ <p><b> This is interesting ways to modify text so that you have the background wanted and still have visible text.
 </body>  
 </html>
